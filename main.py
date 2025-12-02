@@ -12,8 +12,10 @@ def clear_console():
 def welcome():
     # clear_console()
     print("Welcome to our digital Taxi")
-    print("Could you please enter your name")
+    print("\n")
+    print("Could you please enter your name:")
     name = input().strip()
+    print("\n")
     print(f"Helloo, {name}!")
     print(f"The minimun fare is {base_rate:.2f} €.")
     print(f"The stopped fare is {stopped_rate:.2f}€ per second.")
@@ -65,9 +67,9 @@ def main():
                 print("There we go!")
                 current_state = "moving"
 
-            # elif answer == "x":
-            #     print("Lets park...")
-            #     break
+            elif answer == "x":
+                print("Lets park...")
+                break
 
             else:
                 print("Ouch, Technical error, try to press the right key. (S to stop, M to move, X to exit)")
