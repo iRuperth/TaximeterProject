@@ -1,4 +1,6 @@
 import time
+import logging
+
 import os
 
 stopped_rate = 0.02
@@ -11,6 +13,7 @@ def clear_console():
 
 def welcome():
     # clear_console()
+    logging.warning('Starting working') 
     print(" Welcome to our digital Taxi")
     print("\n")
     print(" Welcome again! Please enter your name:")
@@ -40,6 +43,7 @@ def main():
         print("\n Be welcome and enjoy your journey! Current state: moving")
         print(f" Current fare: {total_price:.2f} €.")
         print(" Instructions: Use 'S' for stop, 'M' for move, and 'X' for exit.")
+        logging.warning('Instructions working') 
         #Starting infinite loop for the journey.
         current_state = "moving"
 
@@ -63,19 +67,24 @@ def main():
             if answer == "s":
                 print(" Traffic lights, good heavens!!")
                 current_state = "stopped"
+                logging.warning('Stopped working') 
 
             elif answer == "m":
                 print(" here we go!")
                 current_state = "moving"
+                logging.warning('Moving working') 
 
             elif answer == "x":
                 print(" Lets park...")
+                logging.warning('Parking working') 
                 time.sleep(2)
                 print(" Generating the receipt...")
                 time.sleep(2)
+                logging.warning('Printer working') 
                 print(" Printer sound.")
                 time.sleep(1)
                 break
+                
 
             else:
                 print(" Ouch, Technical error! \n Try to press the right key. (S to stop, M to move, X to exit)")
