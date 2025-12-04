@@ -30,3 +30,8 @@ class TestMain(unittest.TestCase):
         self.assertIn(expected_phrase, captured_output)
 if __name__ == "__main__":
     unittest.main()
+
+
+
+# with open('test.txt', 'w') as file:
+#     file.write('testing!')
