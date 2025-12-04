@@ -48,3 +48,11 @@ Name: Maple
 Total duration: 0.00 seconds
 Total price: 10.00 €
 
+Name: testing6
+Total duration: 5.53 seconds
+Total price: 10.03 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
