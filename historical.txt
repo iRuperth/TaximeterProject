@@ -1,0 +1,46 @@
+Name: rob
+Total duration: 6.10 seconds
+Total price: 10.04 €
+Name: juju
+Total duration: 6.03 seconds
+Total price: 10.05 €
+Name: test3
+Total duration: 6.18 seconds
+Total price: 10.06 €
+
+Name: testing4
+Total duration: 14.60 seconds
+Total price: 10.39 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: testing5
+Total duration: 6.59 seconds
+Total price: 10.05 €
+
