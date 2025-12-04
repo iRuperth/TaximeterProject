@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch, MagicMock, call
 import io
-from main import welcome, main 
+from main import welcome, main
 
 
 class TestMain(unittest.TestCase):
@@ -15,8 +15,8 @@ class TestMain(unittest.TestCase):
     #return value "none" because we don't want to wait for real time delay.
     def test_main(self, mock_sleep, mock_input, mock_stdout):
         
-        # When called Maple, y, s, m, x.
-        mock_input.side_effect = ['Maple', 'y', 's', 'm', 'x']
+        # When called password, 20, Maple, y, s, m, x.
+        mock_input.side_effect = ['password', '20', 'Maple', 'y', 's', 'm', 'x']
         
         # Executing the main function.
         main()

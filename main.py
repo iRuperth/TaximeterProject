@@ -1,18 +1,48 @@
 import time
 import logging
-
 import os
 
-stopped_rate = 0.02
-moving_rate = 0.05
-base_rate = 10.0
+stopped_rate_day = 0.02
+moving_rate_day = 0.05
+base_rate_day = 10.0
+stopped_rate_nocturne = 0.20
+moving_rate_nocturne = 0.40
+base_rate_nocturne = 20.0
+
 
 #Clear console function.
 # def clear_console():
 #     os.system('cls' if os.name == 'nt' else 'clear')
 
+def get_rates_from_auth():
+    while True:
+        password_input = input("Welcome driver Maui, insert your password to start the car: ").strip()
+        if password_input != "password":
+            print("Incorrect password, try again.")
+            continue
+        print("Correct password.")
+
+        while True:
+            time_input_str = input("Insert the current time: 0-23h format: ").strip()
+            try:
+                time_input = int(time_input_str)
+                if 0 <= time_input <= 23:
+                    if time_input >= 18 or time_input <= 6:
+                        print("The nigh's young, Starting the car...")
+                        return stopped_rate_nocturne, moving_rate_nocturne, base_rate_nocturne
+                    else:
+                        print("Wonderful day today, Starting the car...")
+                        return stopped_rate_day, moving_rate_day, base_rate_day
+                else:
+                    print("Incorrect time, try again.")
+            except ValueError:
+                print("Come on, just see your watch.")
+
+
 def welcome():
     # clear_console()
+    stopped_rate, moving_rate, base_rate = get_rates_from_auth()
+
     logging.warning('Starting working') 
     print(" Welcome to our digital Taxi")
     print("\n")
@@ -28,10 +58,10 @@ def welcome():
     answer = input().strip().lower()
     if answer == "y":
         print(" Great, let's go!")
-        return True, name
+        return True, name, stopped_rate, moving_rate, base_rate
     else:
         print(" We hope to see you again!")
-        return False, None
+        return False, None, stopped_rate, moving_rate, base_rate
 
 def historical_txt(name, total_duration, total_price):
     fareContent = f"Name: {name}\n"
@@ -47,7 +77,11 @@ def historical_txt(name, total_duration, total_price):
     
 
 def main():
-    continue_journey, name = welcome()
+    continue_journey, name, stopped_rate, moving_rate, base_rate = welcome()
+    
+    total_duration = 0.0
+    total_price = 0.0
+
     if continue_journey:
         total_price = base_rate
         starting_time_journey = time.time()
@@ -115,8 +149,11 @@ def main():
         print(" Thank you for using our digital taxi.")
         print("----------------------------------------")
 
-    #Adding the journey to the historical.txt file.
-    historical_txt(name, total_duration, total_price)
+        #Adding the journey to the historical.txt file. (MOVED INSIDE IF BLOCK)
+        historical_txt(name, total_duration, total_price)
+
+# FIX: Remove this line completely
+# historical_txt(name, total_duration, total_price)
 
 if __name__ == "__main__":
     #Starting infinite loop for the program.
@@ -128,3 +165,12 @@ if __name__ == "__main__":
     main()
 
 
+# testing (This entire block should be in your tests file, not here)
+# def password():
+#     print("We need to know that you are a human, sorry sorry, I said a real passenger")
+#     if input("Human, insert your password to start the regular taxi. \n").strip() == "password":
+#         print("Beep Beep, im not a robot.")
+#         return True
+#     else:
+#         print("You smell to oil, get out of here!")
+#         return False
