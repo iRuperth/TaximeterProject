@@ -8,8 +8,8 @@ moving_rate = 0.05
 base_rate = 10.0
 
 #Clear console function.
-def clear_console():
-    os.system('cls' if os.name == 'nt' else 'clear')
+# def clear_console():
+#     os.system('cls' if os.name == 'nt' else 'clear')
 
 def welcome():
     # clear_console()
@@ -28,14 +28,27 @@ def welcome():
     answer = input().strip().lower()
     if answer == "y":
         print(" Great, let's go!")
-        return True
+        return True, name
     else:
         print(" We hope to see you again!")
-        return False
+        return False, None
 
+def historical_txt(name, total_duration, total_price):
+    fareContent = f"Name: {name}\n"
+    fareContent += f"Total duration: {total_duration:.2f} seconds\n"
+    fareContent += f"Total price: {total_price:.2f} €\n" 
+    fareContent += "\n" 
+    try:
+        #Using "with open" to append the fare content to the historical.txt file.
+        with open("historical.txt", "a",encoding='utf-8') as file:
+            file.write(fareContent)
+    except IOError:
+        print("Error trying to write to historical.txt")
+    
 
 def main():
-    if welcome():
+    continue_journey, name = welcome()
+    if continue_journey:
         total_price = base_rate
         starting_time_journey = time.time()
         starting_time_state = starting_time_journey
@@ -49,10 +62,9 @@ def main():
 
 
         while True:
+            #waiting for the user to input "  ".
             answer = input(" ").strip().lower()
-            #getting the current time.
             current_time = time.time()
-            #getting the duration of the journey.
             duration = current_time - starting_time_state
 
             #adding the duration to the total price.
@@ -103,6 +115,8 @@ def main():
         print(" Thank you for using our digital taxi.")
         print("----------------------------------------")
 
+    #Adding the journey to the historical.txt file.
+    historical_txt(name, total_duration, total_price)
 
 if __name__ == "__main__":
     #Starting infinite loop for the program.
@@ -110,6 +124,7 @@ if __name__ == "__main__":
     #     main()
     #     #Waiting 2 seconds before starting the next journey.
     #     time.sleep(3)
+    #its comment out, to test the program.
     main()
 
 
