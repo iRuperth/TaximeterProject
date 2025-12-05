@@ -11,8 +11,9 @@ base_rate_nocturne = 20.0
 
 
 #Clear console function.
-# def clear_console():
-#     os.system('cls' if os.name == 'nt' else 'clear')
+def clear_console():
+
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def get_rates_from_auth():
     while True:
@@ -40,13 +41,13 @@ def get_rates_from_auth():
 
 
 def welcome():
-    # clear_console()
+    clear_console()
     stopped_rate, moving_rate, base_rate = get_rates_from_auth()
 
     logging.warning('Starting working') 
     print(" Welcome to our digital Taxi")
     print("\n")
-    print(" Welcome again! Please enter your name:")
+    print(" Welcome again! Please enter the passenger name:")
     name = input().strip()
     print("\n")
     print(f" Helloo, {name}!")
