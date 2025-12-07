@@ -5,3 +5,12 @@ mock : Used to simulate objects and methods. / within test functions.
 MagicMock : Used within test functions or via @patch decorator.
 @patch : Decorator used to mock objects or methods.
 assert_called_with : End of the test function (verification phase).
+super : Used to call methods from the parent class.
+ class perro(animal):
+    def __init__(self, name, age):
+        super().__init__(name, age)
+
+ckass perro(animal):
+    def_init_(self, name, age, breed):
+        animal.__init__(self, name, age)
+        self.breed = breed
