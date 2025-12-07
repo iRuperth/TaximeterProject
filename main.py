@@ -2,17 +2,27 @@ import time
 import logging
 import os
 
-#Main variables.
+# Main variables.
 stopped_rate_day = 0.02
 moving_rate_day = 0.05
 base_rate_day = 10.0
 stopped_rate_nocturne = 0.20
 moving_rate_nocturne = 0.40
 base_rate_nocturne = 20.0
+password = "password"
 
-#Clear console function.
+# Clear console function.
     # def clear_console():
     #     os.system('cls' if os.name == 'nt' else 'clear')
+
+def driver_auth():
+    while True:
+        password_input = input("Welcome driver Maui, insert your password to start the car: ").strip()
+        if password_input != password:
+            print("Incorrect password, try again.")
+            continue
+        print("Correct password.")
+        return True
 
 class TaxiFareLogger:
     def log_journey(self, name, total_duration, total_price):
@@ -88,7 +98,7 @@ class Taxi:
         print("\n")
         print(" Do you wish to continue? (y/n)")
         answer = input().strip().lower()
-        logging.warning(f'Second user input continue answer: {answer}') # New log
+        logging.warning(f'Second user input continue answer: {answer}')
         if answer == "y":
             print(" Great, let's go!")
             self.total_price = self.base_rate
@@ -105,7 +115,6 @@ class Taxi:
         print(f" Current fare: {self.total_price:.2f} €.")
         print(" Instructions: Use 'S' for stop, 'M' for move, and 'X' for exit.")
         logging.warning('Instructions working') 
-
 
         #private method.
     def _update_fare_duration(self, current_time):
@@ -174,11 +183,16 @@ if __name__ == "__main__":
     #     #Waiting 2 seconds before starting the next journey.
     #     time.sleep(3)
     #its comment out, to test the program.
-    
-    # OOP Execution Flow:
-    taxi_app = Taxi()
-    taxi_app.welcome_passenger()
-    
-    if taxi_app.continue_journey:
-        taxi_app.start_journey_loop()
-        taxi_app.end_journey()
+
+    authentication_successful = driver_auth()
+
+    if authentication_successful:
+        taxi_app = Taxi()
+        taxi_app.welcome_passenger()
+        
+        if taxi_app.continue_journey:
+            taxi_app.start_journey_loop()
+            taxi_app.end_journey()
+    else: 
+        print('Cant you authenticate?')
+
