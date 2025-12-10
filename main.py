@@ -14,17 +14,17 @@ base_rate_nocturne = 20.0
     # def clear_console():
     #     os.system('cls' if os.name == 'nt' else 'clear')
 
-class TaxiFareLogger:
-    def log_journey(self, name, total_duration, total_price):
-        fareContent = f"Name: {name}\n"
-        fareContent += f"Total duration: {total_duration:.2f} seconds\n"
-        fareContent += f"Total price: {total_price:.2f} €\n" 
-        fareContent += "\n" 
-        try:
-            #Using "with open" to append the fare content to the historical.txt file.
-            with open("historical.txt", "a", encoding='utf-8') as file:
+#Logging function.
+def log_journey( name, total_duration, total_price):
+    fareContent = f"Name: {name}\n"
+    fareContent += f"Total duration: {total_duration:.2f} seconds\n"
+    fareContent += f"Total price: {total_price:.2f} €\n" 
+    fareContent += "\n" 
+    try:
+        #Using "with open" to append the fare content to the historical.txt file.
+        with open("historical.txt", "a", encoding='utf-8') as file:
                 file.write(fareContent)
-        except IOError:
+    except IOError:
             print("Error trying to write to historical.txt")
 
 class Taxi:
@@ -43,7 +43,7 @@ class Taxi:
         self.start_time_state = None
         self.continue_journey = False
         #Composition.
-        self.logger = TaxiFareLogger()
+        self.logger = log_journey
     
     def set_rates_from_time(self):
         while True:
@@ -164,7 +164,7 @@ class Taxi:
         print("----------------------------------------")
 
         #Adding the journey to the historical.txt file.
-        self.logger.log_journey(self.passenger_name, self.total_duration, self.total_price)
+        self.logger(self.passenger_name, self.total_duration, self.total_price)
 
 
 if __name__ == "__main__":
