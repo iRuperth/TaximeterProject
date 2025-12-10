@@ -172,3 +172,11 @@ Name: sad
 Total duration: 7.47 seconds
 Total price: 20.18 €
 
+Name: asd
+Total duration: 11.92 seconds
+Total price: 21.62 €
+
+Name: asd
+Total duration: 11.57 seconds
+Total price: 21.32 €
+
