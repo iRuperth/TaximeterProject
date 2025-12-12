@@ -180,3 +180,7 @@ Name: asd
 Total duration: 11.57 seconds
 Total price: 21.32 €
 
+Name: rob
+Total duration: 10.73 seconds
+Total price: 21.29 €
+
