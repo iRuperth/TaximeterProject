@@ -73,7 +73,7 @@ class Taxi:
         print("\n")
         print(" Do you wish to continue? (y/n)")
         answer = input().strip().lower()
-        logging.warning(f'Second user input continue answer: {answer}') # New log
+        logging.warning(f'Second user input continue answer: {answer}')
         if answer == "y":
             print(" Great, let's go!")
             self.total_price = self.base_rate
