@@ -1,0 +1,7 @@
+__int__ : constructor.
+def : method. Action that the object can perform.
+self : instance.
+mock : Used to simulate objects and methods. / within test functions.
+MagicMock : Used within test functions or via @patch decorator.
+@patch : Decorator used to mock objects or methods.
+assert_called_with : End of the test function (verification phase).
