@@ -164,3 +164,23 @@ Name: rob
 Total duration: 10.23 seconds
 Total price: 21.01 €
 
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: sad
+Total duration: 7.47 seconds
+Total price: 20.18 €
+
+Name: asd
+Total duration: 11.92 seconds
+Total price: 21.62 €
+
+Name: asd
+Total duration: 11.57 seconds
+Total price: 21.32 €
+
+Name: rob
+Total duration: 10.73 seconds
+Total price: 21.29 €
+
