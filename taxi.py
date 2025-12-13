@@ -14,7 +14,6 @@ base_rate_nocturne = 20.0
 
 class Taxi:
     def __init__(self):
-        # Rates will be set by set_rates_from_time
         self.base_rate = 0.0
         self.stopped_rate = 0.0
         self.moving_rate = 0.0

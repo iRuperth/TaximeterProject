@@ -3,9 +3,11 @@ import logging
 import os
 from taxi import Taxi
 from log_journey import log_journey
-
+from authentication import driver_auth
 if __name__ == "__main__":
     # OOP Execution Flow:
+
+    driver_auth()
     taxi_app = Taxi()
     taxi_app.welcome_passenger()
     taxi_app.logger = log_journey
