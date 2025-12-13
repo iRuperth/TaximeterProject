@@ -1,0 +1,186 @@
+Name: rob
+Total duration: 6.10 seconds
+Total price: 10.04 €
+Name: juju
+Total duration: 6.03 seconds
+Total price: 10.05 €
+Name: test3
+Total duration: 6.18 seconds
+Total price: 10.06 €
+
+Name: testing4
+Total duration: 14.60 seconds
+Total price: 10.39 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: testing5
+Total duration: 6.59 seconds
+Total price: 10.05 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: testing6
+Total duration: 5.53 seconds
+Total price: 10.03 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 10.00 €
+
+Name: as
+Total duration: 8.58 seconds
+Total price: 10.18 €
+
+Name: bob
+Total duration: 6.72 seconds
+Total price: 20.68 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: test23
+Total duration: 5.71 seconds
+Total price: 20.28 €
+
+Name: sg
+Total duration: 6.09 seconds
+Total price: 22.43 €
+
+Name: testing 001
+Total duration: 10.16 seconds
+Total price: 22.06 €
+
+Name: testing42
+Total duration: 12.50 seconds
+Total price: 22.60 €
+
+Name: testing63
+Total duration: 6.81 seconds
+Total price: 20.72 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: asd
+Total duration: 5.41 seconds
+Total price: 20.16 €
+
+Name: Rob
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: testing23
+Total duration: 5.33 seconds
+Total price: 20.13 €
+
+Name: rob
+Total duration: 11.96 seconds
+Total price: 22.32 €
+
+Name: rob
+Total duration: 10.23 seconds
+Total price: 21.01 €
+
+Name: Maple
+Total duration: 0.00 seconds
+Total price: 20.00 €
+
+Name: sad
+Total duration: 7.47 seconds
+Total price: 20.18 €
+
+Name: asd
+Total duration: 11.92 seconds
+Total price: 21.62 €
+
+Name: asd
+Total duration: 11.57 seconds
+Total price: 21.32 €
+
+Name: rob
+Total duration: 10.73 seconds
+Total price: 21.29 €
+
