@@ -184,3 +184,7 @@ Name: rob
 Total duration: 10.73 seconds
 Total price: 21.29 €
 
+Name: aruba
+Total duration: 9.87 seconds
+Total price: 20.82 €
+
