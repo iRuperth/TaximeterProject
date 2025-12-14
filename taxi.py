@@ -147,5 +147,5 @@ class Taxi:
         print(" Thank you for using our digital taxi.")
         print("----------------------------------------")
 
-        #Adding the journey to the historical.txt file.
-        self.logger(self.passenger_name, self.total_duration, self.total_price)
+
+        self.logger(self.user_id, self.passenger_name, self.total_duration, self.total_price)

@@ -1,20 +1,15 @@
 import time
 import logging
 import os
+from journey_database import init_db, log_journey
 from taxi import Taxi
-from log_journey import log_journey
 from authentication import driver_auth
-if __name__ == "__main__":
-    # OOP Execution Flow:
 
-    driver_auth()
-    taxi_app = Taxi()
+if __name__ == "__main__":
+    init_db()
+    authenticated_user_id = driver_auth()
+    taxi_app = Taxi(authenticated_user_id)
     taxi_app.welcome_passenger()
-    taxi_app.logger = log_journey
     if taxi_app.continue_journey:
         taxi_app.start_journey_loop()
         taxi_app.end_journey()
-
-
-# def clear_console():
-#     os.system('cls' if os.name == 'nt' else 'clear')
