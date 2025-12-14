@@ -1,7 +1,8 @@
 import sqlite3
-
-DATABASE = "journey_database.db"
-DB_TIMEOUT = 10 # 10 seconds
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATABASE = os.path.join(BASE_DIR, "data", "journey_database.db")
+DB_TIMEOUT = 10
 
 def init_db():
     timeout_ms = DB_TIMEOUT * 1000
