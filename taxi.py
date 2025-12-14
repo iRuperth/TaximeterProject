@@ -1,7 +1,6 @@
-from log_journey import log_journey
+from journey_database import log_journey 
 import logging
 import time
-
 
 stopped_rate_day = 0.02
 moving_rate_day = 0.05
@@ -10,15 +9,11 @@ stopped_rate_nocturne = 0.20
 moving_rate_nocturne = 0.40
 base_rate_nocturne = 20.0
 
-
-
 class Taxi:
-    def __init__(self):
+    def __init__(self, user_id): 
         self.base_rate = 0.0
         self.stopped_rate = 0.0
         self.moving_rate = 0.0
-
-        # Journey state attributes
         self.passenger_name = None
         self.total_price = 0.0
         self.total_duration = 0.0
@@ -26,13 +21,13 @@ class Taxi:
         self.start_time_journey = None
         self.start_time_state = None
         self.continue_journey = False
-        #Composition.
+        self.user_id = user_id 
         self.logger = log_journey
     
     def set_rates_from_time(self):
         while True:
             time_input_str = input("Insert the current time: 0-23h format: ").strip()
-            logging.warning(f'User input time: {time_input_str}') # New log
+            logging.warning(f'User input time: {time_input_str}')
             try:
                 time_input = int(time_input_str)
                 if 0 <= time_input <= 23:
@@ -54,8 +49,7 @@ class Taxi:
                 print("Come on, just see your watch.")
 
     def welcome_passenger(self):
-        # clear_console()
-        self.set_rates_from_time() # Calling the internal method to set rates.
+        self.set_rates_from_time()
 
         logging.warning('Starting working') 
         print(" Welcome to our digital Taxi")
@@ -72,7 +66,7 @@ class Taxi:
         print("\n")
         print(" Do you wish to continue? (y/n)")
         answer = input().strip().lower()
-        logging.warning(f'Second user input continue answer: {answer}') # New log
+        logging.warning(f'Second user input continue answer: {answer}')
         if answer == "y":
             print(" Great, let's go!")
             self.total_price = self.base_rate
@@ -84,14 +78,11 @@ class Taxi:
     def set_time_journey(self):
         self.start_time_journey = time.time()
         self.start_time_state = self.start_time_journey
-        # current_state = "Moving" Starting state.
         print("\n Be welcome and enjoy your journey! Current state: moving")
         print(f" Current fare: {self.total_price:.2f} €.")
         print(" Instructions: Use 'S' for stop, 'M' for move, and 'X' for exit.")
         logging.warning('Instructions working') 
 
-
-        #private method.
     def _update_fare_duration(self, current_time):
         duration = current_time - self.start_time_state
         if self.current_state == "moving":
@@ -103,11 +94,9 @@ class Taxi:
 
     def start_journey_loop(self):
         self.set_time_journey()
-        #Starting infinite loop for the journey.
         while True:
-            #waiting for the user to input "  ".
             answer = input(" ").strip().lower()
-            logging.warning(f'User input command: {answer}') # New log
+            logging.warning(f'User input command: {answer}')
             current_time = time.time()
             self._update_fare_duration(current_time)
 
@@ -115,12 +104,10 @@ class Taxi:
                 print(" Traffic lights, good heavens!!")
                 self.current_state = "stopped"
                 logging.warning('Stopped working') 
-
             elif answer == "m":
                 print(" here we go!")
                 self.current_state = "moving"
                 logging.warning('Moving working') 
-
             elif answer == "x":
                 print(" Lets park...")
                 logging.warning('Parking working') 
